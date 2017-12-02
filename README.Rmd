@@ -1,0 +1,83 @@
+---
+title: "SpookyAuthors"
+author: "Shaul"
+output: html_document
+---
+
+<br>
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Challenge Description
+
+<br>
+
+The competition dataset contains text from works of fiction written by spooky authors of the public domain: Edgar Allan Poe, HP Lovecraft and Mary Shelley. The data was prepared by chunking larger texts into sentences using CoreNLP's MaxEnt sentence tokenizer, so you may notice the odd non-sentence here and there. Your objective is to accurately identify the author of the sentences in the test set.
+
+<br>
+
+
+### File descriptions
+
+<br>
+
+**train.csv** - the training set <br>
+**test.csv** - the test set <br>
+
+**id** - a unique identifier for each sentence <br>
+**text** - some text written by one of the authors <br>
+**author** - the author of the sentence (EAP: Edgar Allan Poe, HPL: HP Lovecraft; MWS: Mary Wollstonecraft Shelley) <br>
+
+
+[link](https://www.kaggle.com/c/spooky-author-identification/data) to data.
+
+<br><br>
+
+
+## Directions
+
+<br>
+
+### Engineered Features
+
+<br>
+
+  + Sentence Diversity
+  
+  + Sentence Length
+  
+  + Stop words
+  
+  ...
+
+<br>
+
+### Named Entity Recognitions
+
+  + [openNLP](https://opennlp.apache.org/)
+  
+<br>
+
+### Topic Modeliing
+
+  + LDA - many different implementations, one option is the `topicmodels` package
+  
+<br>
+
+### Embeddings
+
+  + [GLOVE](https://github.com/stanfordnlp/GloVe)
+  
+  + [fasttext](https://github.com/facebookresearch/fastText)
+  
+More options [here](http://ahogrammer.com/2017/01/20/the-list-of-pretrained-word-embeddings/)
+  
+<br>
+
+## Bayesian Models
+
+  + [quanteda](http://docs.quanteda.io/reference/textmodel_nb.html)
+  
+<br><br>
